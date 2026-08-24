@@ -253,12 +253,34 @@ with tab_edu:
 
 # FOOTER CONTACT FORM
 st.markdown("---")
+import requests
+
+st.markdown("---")
 st.subheader("📬 Send Me a Direct Message")
-with st.form("contact_form"):
+
+with st.form("contact_form", clear_on_submit=True):
     name = st.text_input("Your Name / Recruiter Name")
     email = st.text_input("Your Email")
     message = st.text_area("Message")
-    submit = st.form_submit_button("Submit Message")
+    submit = st.form_submit_button("Send Message")
     
     if submit:
-        st.success("Thank you for reaching out! I will respond promptly.")
+        if not name or not email or not message:
+            st.warning("Please fill out all fields before sending.")
+        else:
+            # Free email submission service (FormSubmit)
+            formsubmit_url = "https://formsubmit.co/ajax/dokhyogita20@gmail.com"
+            
+            payload = {
+                "name": name,
+                "email": email,
+                "message": message,
+                "_subject": f"New Portfolio Message from {name}"
+            }
+            
+            response = requests.post(formsubmit_url, data=payload)
+            
+            if response.status_code == 200:
+                st.success("Thank you! Your message has been sent directly to my inbox.")
+            else:
+                st.error("Something went wrong. Please reach out via email directly!")
