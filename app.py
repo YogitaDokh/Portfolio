@@ -76,7 +76,7 @@ st.markdown("""
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/3135/3135715.png", width=110)
+    st.image("https://drive.google.com/file/d/1Zgt6tmotQUdAlLKMSdYUd0_Ta9kfwY5h/view?usp=drive_link", width=110)
     st.title("Yogita Dokh")
     st.caption("📍 Pune, India")
     
