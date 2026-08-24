@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import requests
+
 
 # Page Configuration
 st.set_page_config(
@@ -252,9 +254,6 @@ with tab_edu:
         st.write("Specialized coursework in applied generative models and advanced AI workflows.")
 
 # FOOTER CONTACT FORM
-st.markdown("---")
-import requests
-
 st.markdown("---")
 st.subheader("📬 Send Me a Direct Message")
 
