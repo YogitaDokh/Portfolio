@@ -76,7 +76,7 @@ st.markdown("""
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.image("https://drive.google.com/file/d/1Zgt6tmotQUdAlLKMSdYUd0_Ta9kfwY5h/view?usp=drive_link", width=110)
+    st.image("WhatsApp Image 2026-08-24 at 4.12.15 PM.jpeg", width=110)
     st.title("Yogita Dokh")
     st.caption("📍 Pune, India")
     
